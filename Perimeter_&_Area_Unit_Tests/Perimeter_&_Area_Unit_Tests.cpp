@@ -13,12 +13,14 @@ namespace PerimeterAreaUnitTests
         // The Function definitions
         int getPerimeter(int* length, int* width)
         {
-            return (*length + *width) * 2; //what the return value will be for this function
+            int perimeter = *length + *length + *width + *width;
+            return perimeter; //what the return value will be for this function
         }
 
         int getArea(int* length, int* width)
         {
-            return ((*length) * (*width)); //what the return value will be for this function
+            int area = *length * *width;
+            return area;  //what the return value will be for this function
         }
 
         //Case #1 - Perimeter - Equal to Check 
@@ -52,4 +54,3 @@ namespace PerimeterAreaUnitTests
         }
     };
 }
-
