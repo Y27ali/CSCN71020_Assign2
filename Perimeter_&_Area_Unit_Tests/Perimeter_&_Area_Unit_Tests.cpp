@@ -13,43 +13,43 @@ namespace PerimeterAreaUnitTests
         // The Function definitions
         int getPerimeter(int* length, int* width)
         {
-            int perimeter = *length + *length + *width + *width;
+            int perimeter = (*length + *length + *width + *width);
             return perimeter; //what the return value will be for this function
         }
 
         int getArea(int* length, int* width)
         {
-            int area = *length * *width;
+            int area = (*length * *width);
             return area;  //what the return value will be for this function
         }
 
-        //Case #1 - Perimeter - Equal to Check 
-        TEST_METHOD(TestGetPerimeter_Valid)
+        //Case #1 - Checking if the inputs to the 'getPerimeter' function correctly result in the expected output
+        TEST_METHOD(TestgetPerimeter_Valid_Perimeter_Calculation)
         {
             // Arrange - Initialization 
             int length = 20;
-            int width = 40;
-            int expected = 120; //Expected perimeter
+            int width = 25;
+            int expected = 90; //Expected perimeter result
 
             // Act - The 'getPerimeter' function return value is being assigned to 'result'; the function is being called. 
             int result = getPerimeter(&length, &width);
 
-            // Assert - Testing the function result
+            //Assert - Testing the Function Behaviour
             Assert::AreEqual(expected, result);
         }
 
-        //Case #2 - Area - Equal to Check 
+        //Case #2 - Checking if the inputs to the 'getArea' function correctly result in the expected output
         TEST_METHOD(TestGetArea_Valid)
         {
             // Arrange - Initialization
-            int length = 10;
-            int width = 15;
-            int expected = 150; //Expected Area
+            int length = 7;
+            int width = 11;
+            int expected = 77; //Expected Area
 
             //Act - The 'getArea' function return value is being assigned to 'result'; the function is being called. 
             int result = getArea(&length, &width);
 
-            // Assert - Testing the function result
+            //Assert - Testing the Function Behaviour
             Assert::AreEqual(expected, result);
         }
     };
