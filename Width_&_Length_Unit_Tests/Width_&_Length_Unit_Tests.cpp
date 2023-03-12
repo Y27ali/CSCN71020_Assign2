@@ -70,7 +70,7 @@ namespace WidthLengthUnitTests
 
         /*******************************************************************************************************************************************************************************/
 
-        //Case #4 - Checking if the input to the 'setWidth' function correctly updates the value of the length variable.
+        //Case #4 - Checking if the input to the 'setWidth' function correctly updates the value of the width variable.
         TEST_METHOD(TestsetWidth_Valid_Input_Assignment) 
         {
             //Arrange - Initialization
@@ -96,7 +96,7 @@ namespace WidthLengthUnitTests
             setWidth(input, &width);
 
             //Assert - Testing the Function Behaviour
-            Assert::AreEqual(expectedwidth, width); //If pass then length will be 0 as the function will not update the variable 'width' to -1
+            Assert::AreEqual(expectedwidth, width); //If pass then width will be 0 as the function will not update the variable 'width' to -1
         };
 
         //Case #6 - Checking to see if the setWidth function properly truncates input with decimals down to the nearest whole number 
@@ -111,7 +111,7 @@ namespace WidthLengthUnitTests
             setWidth(input, &width);
 
             //Assert - Testing the Function Behaviour
-            Assert::AreEqual(expectedwidth, width); //If pass then length will be 13
+            Assert::AreEqual(expectedwidth, width); //If pass then width will be 13
         };
     };
     }
